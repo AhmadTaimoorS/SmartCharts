@@ -60,12 +60,11 @@ class DrawingToolModel {
     drawingTools.onDrawingToolSelection(config);
   }
 
-  /// function to get drawtool items
-  // List<DrawingToolConfig>? getDrawingToolsRepoItems() => drawingToolsRepo.items;
-
-  ///
+  /// Getting Drawing Tools Repo Item
   List<String> getDrawingToolsRepoItems() =>
-      drawingToolsRepo.items.map((e) => jsonEncode(e)).toList();
+      drawingToolsRepo.items
+      .map((DrawingToolConfig e) => jsonEncode(e))
+      .toList();
 
 
 
