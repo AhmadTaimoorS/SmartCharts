@@ -60,7 +60,7 @@ class DrawingToolModel {
     drawingTools.onDrawingToolSelection(config);
   }
 
-  /// Getting Drawing Tools Repo Item
+  /// Getting Drawing Tools Repo
   List<String> getDrawingToolsRepoItems() =>
       drawingToolsRepo.items
       .map((DrawingToolConfig e) => jsonEncode(e))
@@ -79,31 +79,6 @@ class DrawingToolModel {
   /// To remove an existing drawing tool
   void removeDrawingTool(int index) {
     drawingToolsRepo.removeAt(index);
-  }
-
-  /// To get the tool name from config
-  String getTypeOfSelectedDrawingTool(DrawingToolConfig config) {
-    if (config is VerticalDrawingToolConfig) {
-      return 'vertical';
-    } else if (config is LineDrawingToolConfig) {
-      return 'line';
-    } else if (config is RayDrawingToolConfig) {
-      return 'ray';
-    } else if (config is ContinuousDrawingToolConfig) {
-      return 'continuous';
-    } else if (config is TrendDrawingToolConfig) {
-      return 'trend';
-    } else if (config is HorizontalDrawingToolConfig) {
-      return 'Horizontal';
-    } else if (config is ChannelDrawingToolConfig) {
-      return 'channel';
-    } else if (config is FibfanDrawingToolConfig) {
-      return 'fibfan';
-    } else if (config is RectangleDrawingToolConfig) {
-      return 'rectangle';
-    } else {
-      return '';
-    }
   }
 
   /// To edit a drawing

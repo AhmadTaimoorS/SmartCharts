@@ -239,12 +239,6 @@ JsObject _exposeDrawingToolModel(DrawingToolModel model) {
 
   setProperty(
     chartConfig,
-    'getTypeOfSelectedDrawingTool',
-    allowInterop(model.getTypeOfSelectedDrawingTool),
-  );
-
-  setProperty(
-    chartConfig,
     'editDrawing',
     allowInterop(model.editDrawing),
   );
