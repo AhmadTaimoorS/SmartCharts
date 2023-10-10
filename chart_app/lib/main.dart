@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:collection';
 import 'dart:math';
 import 'dart:ui';
@@ -75,9 +74,7 @@ class _DerivChartWebAdapterState extends State<_DerivChartWebAdapter> {
     }
 
     if (html.document.visibilityState == 'visible' && isFollowMode) {
-      Timer(const Duration(milliseconds: 100), () {
-        app.wrappedController.scrollToLastTick();
-      });
+      app.wrappedController.scrollToLastTick();
     }
 
     if (html.document.visibilityState == 'hidden' && rightBoundEpoch != null) {

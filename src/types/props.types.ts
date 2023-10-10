@@ -6,7 +6,7 @@ import {
     ProposalOpenContract,
 } from '@deriv/api-types';
 
-import { TActiveDrawingToolItem } from 'src/store/DrawToolsStore';
+import { TActiveDrawingToolItem, TDrawingCreatedConfig } from 'src/store/DrawToolsStore';
 import { HtmlHTMLAttributes } from 'react';
 import { BinaryAPI } from 'src/binaryapi';
 import { ChartTypes } from 'src/Constant';
@@ -399,6 +399,7 @@ export type TFlutterChart = {
         clearDrawingTool: () => void;
         // eslint-disable-next-line @typescript-eslint/ban-types
         getDrawingToolsRepoItems: () => string[];
+        getTypeOfSelectedDrawingTool: (config: TDrawingCreatedConfig) => string;
         clearDrawingToolSelect: () => void;
         editDrawing: (config: string, index: number) => void;
     };
