@@ -97,6 +97,7 @@ class CrosshairStore {
     };
 
     onMouseMove = (dx: number, dy: number, epoch: number, quote: string) => {
+        console.log('IT IS FROM THE TETLINK');
         if (this.hoverOnScreen === false) {
             this.isOverChartContainer = true;
             this.updateVisibility(true);
