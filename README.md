@@ -661,7 +661,7 @@ export default connect(({ chartTitle: c }) => ({
 
 ##### 3. Independent Components: components that are not managed by the main store
 
-Examples: `<Barrier />`, `<Marker />`
+Examples: `<Barrier />`
 
 Independent components is able to access the main store, but the main store has no control over independent components. As such, each independent component manages its own life cycle. Here is the interface for its store:
 
